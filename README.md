@@ -23,7 +23,7 @@ How to use
 First, create a bare repo::
 
 ```
-$ mkdir my-repo-backup && cd my-repo-backup
+$ mkdir /path/to/my-repo-backup && cd /path/to/my-repo-backup
 $ git init --bare
 ```
 
@@ -36,7 +36,7 @@ $ git remote add origin https://github.com/my-name/my-repo.git
 Then simply run doublegit once in a while:
 
 ```
-$ doublegit /path/to/my-repo-backup
+$ doublegit update /path/to/my-repo-backup
 ```
 
 You can then query `gitarchive.sqlite3` for branch updates or for the position of the branches at a given point in time.
@@ -48,4 +48,8 @@ I think it would be cool if this tool could record GitHub/GitLab/... API events 
 
 It could also automatically backup all your starred repos.
 
-Some kind of query interface needs to be written (I'm thinking web).
+How to build
+============
+```bash
+$ cargo build
+```
